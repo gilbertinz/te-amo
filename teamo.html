@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quanto o Gil te ama?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #ff99cc;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff66b2;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    button {
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      margin: 10px;
+      border-radius: 25px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #e60073;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png');
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <h1>💖 Oi, minha princesa 💖</h1>
+  <p>Vamos ver se você sabe o quanto o Gil te ama... 😍</p>
+  <p>Você só tem uma chance! Escolha com o coração! 💘</p>
+
+  <button onclick="responder(1)">O Gil te ama MUITO!</button><br>
+  <button onclick="responder(2)">O Gil não te ama 😢</button><br>
+  <button onclick="responder(3)">Você é o amor da vida do Gil 💍</button><br>
+  <button onclick="responder(4)">Ele prefere a Layla 🐶</button>
+
+  <script>
+    function responder(opcao) {
+      let mensagem = "";
+      switch(opcao) {
+        case 1:
+          mensagem = "Você quase acertou! Eu te amo MUITO, mas tem algo ainda mais forte... 💗";
+          break;
+        case 2:
+          mensagem = "Você errou feiooo! Como assim?? 😭 Eu te amo demais!!";
+          break;
+        case 3:
+          mensagem = "ACERTOU EM CHEIO!!! 🎯💘 Você é o amor da minha vida, minha futura esposa!";
+          break;
+        case 4:
+          mensagem = "A Layla é meu bbzinho sim 🐶, mas você é meu amor eterno! Errou! 😅";
+          break;
+        default:
+          mensagem = "Opa! Escolha uma opção válida 😄";
+      }
+      alert(mensagem);
+    }
+  </script>
+
+</body>
+</html>
